@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>E乐购</title>
-  <link rel="stylesheet" href="/static/css/jquery.fullPage.min.css">
-  <link rel="stylesheet" href="/static/css/animate.min.css">
+  <link rel="stylesheet" href="static/css/jquery.fullPage.min.css">
+  <link rel="stylesheet" href="static/css/animate.min.css">
   <style>
     img {
       max-width: 100%;
@@ -80,10 +80,10 @@
   <div id="fullpage">
     <div class="section">
       <div class="slide">
-        <img src="/static/image/welcome_01.jpg" alt="">
+        <img src="static/image/welcome_01.jpg" alt="">
       </div>
       <div class="slide">
-        <img src="/static/image/welcome_02.jpg" alt="">
+        <img src="static/image/welcome_02.jpg" alt="">
         <button class="btn-enter">立即进入</a>
       </div>
     </div>
@@ -91,9 +91,9 @@
       <img src="/static/image/welcome.jpg" alt="">
     </div> -->
   </div>
-  <script src="/static/js/singer.min.js"></script>
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/js/jquery.fullPage.min.js"></script>
+  <script src="static/js/singer.min.js"></script>
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/jquery.fullPage.min.js"></script>
   <script>
     (function (S, $) {
       $(function () {
@@ -106,7 +106,7 @@
         $('.btn-enter').click(function () {
           //cookie 
           S.cookie.set('__elegou_guide', true, 100 * 24 * 60)
-          location.href = '/#/'
+          location.href = '/elegou/#/'
         });
       })
     })(SINGER, jQuery)
