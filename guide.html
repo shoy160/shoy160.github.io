@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>E乐购</title>
+  <link rel="stylesheet" href="/static/css/jquery.fullPage.min.css">
+  <link rel="stylesheet" href="/static/css/animate.min.css">
+  <style>
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      overflow: hidden;
+    }
+
+    #fullpage {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .fp-tableCell {
+      position: relative;
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+      }
+    
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .btn-enter {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border-radius: 4px;
+      border: 0;
+      box-sizing: border-box;
+      display: block;
+      font-size: 14px;
+      height: 33px;
+      outline: 0;
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+      background-color: #84b853;
+      display: inline-block;
+      padding: 0 12px;
+      position: absolute;
+      bottom: 90px;
+      left: 50%;
+      margin-left: -32px;
+      opacity: 0;      
+      /* transition:all 2s ease 0s; */
+    }
+
+    .fp-slide.active .btn-enter {
+      opacity: 1;
+      animation-delay:0.5s;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-name: fadeInRight;
+    }
+    #fp-nav ul li a span, .fp-slidesNav ul li a span {
+      background-color: #84b853;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fullpage">
+    <div class="section">
+      <div class="slide">
+        <img src="/static/image/welcome_01.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/static/image/welcome_02.jpg" alt="">
+        <button class="btn-enter">立即进入</a>
+      </div>
+    </div>
+    <!-- <div class="section">
+      <img src="/static/image/welcome.jpg" alt="">
+    </div> -->
+  </div>
+  <script src="/static/js/singer.min.js"></script>
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/jquery.fullPage.min.js"></script>
+  <script>
+    (function (S, $) {
+      $(function () {
+        $('#fullpage').fullpage({
+          loopHorizontal: false,
+          navigation: false,
+          controlArrows: false,
+          slidesNavigation: true
+        });
+        $('.btn-enter').click(function () {
+          //cookie 
+          S.cookie.set('__elegou_guide', true, 100 * 24 * 60)
+          location.href = '/#/'
+        });
+      })
+    })(SINGER, jQuery)
+
+  </script>
+</body>
+
+</html>
